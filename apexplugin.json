@@ -24,7 +24,7 @@
         "plugin" : {
           "internalName" : "ANGOOTI.CAPTCHA",
           "type" : "item",
-          "demo" : "https://apex.oracle.com/pls/apex/sdembele/r/79291/intl-phone-number",
+          "demo" : "https://apex.oracle.com/pls/apex/f?p=54580:2",
           "previewImage" : "https://raw.githubusercontent.com/angooti/Apex-Captcha/main/apex-captcha.gif"
         }
       }
