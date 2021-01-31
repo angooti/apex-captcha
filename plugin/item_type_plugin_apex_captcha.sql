@@ -28,7 +28,7 @@ prompt APPLICATION 100 - Plugins
 -- Application Export:
 --   Application:     100
 --   Name:            Plugins
---   Date and Time:   19:36 Sunday January 31, 2021
+--   Date and Time:   23:29 Sunday January 31, 2021
 --   Exported By:     ADMIN
 --   Flashback:       0
 --   Export Type:     Component Export
@@ -202,7 +202,7 @@ wwv_flow_api.create_plugin(
 '        </div>',
 '        <span id="spn_rmcaptcha_refresh_#g_main_id#" title="New image" style="margin-top: 50px; cursor: pointer" onclick="rmcaptcha_refresh_#g_main_id#()" aria-hidden="true" class="t-Icon fa fa-refresh"></span>',
 '        <br>',
-'        <input type="text" name="#name#" id="#id#" class="text_field apex-item-text" maxlength="#length#" style="margin: 0px 0px 8px 0px;text-align: center;width: 120px;" />',
+'        <input type="text" placeholder="#placeholder#" name="#name#" id="#id#" class="text_field apex-item-text" maxlength="#length#" style="margin: 0px 0px 8px 0px;text-align: center;width: 120px;" />',
 '    '';',
 '    v_css := replace(v_css, ''#g_main_id#'', g_main_id);',
 '    v_out := replace(v_out, ''#g_main_id#'', g_main_id);',
@@ -210,6 +210,7 @@ wwv_flow_api.create_plugin(
 '    v_out := replace(v_out, ''#name#'', p_item.name);',
 '    v_out := replace(v_out, ''#id#'', p_item.name);',
 '    v_out := replace(v_out, ''#length#'', v_length);',
+'    v_out := replace(v_out, ''#placeholder#'', p_item.attribute_04);',
 '    htp.p(v_out);',
 '    ',
 'end write_captcha;',
@@ -335,7 +336,7 @@ wwv_flow_api.create_plugin_attribute(
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
-,p_prompt=>'Type'
+,p_prompt=>'Captcha Type'
 ,p_attribute_type=>'SELECT LIST'
 ,p_is_required=>true
 ,p_show_in_wizard=>false
@@ -347,7 +348,7 @@ wwv_flow_api.create_plugin_attr_value(
  p_id=>wwv_flow_api.id(9006452020707547)
 ,p_plugin_attribute_id=>wwv_flow_api.id(9004017323686276)
 ,p_display_sequence=>10
-,p_display_value=>'Complex'
+,p_display_value=>'Letters and Numbers'
 ,p_return_value=>'C'
 );
 wwv_flow_api.create_plugin_attr_value(
@@ -370,7 +371,7 @@ wwv_flow_api.create_plugin_attribute(
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
-,p_prompt=>'Length'
+,p_prompt=>'Captcha Length'
 ,p_attribute_type=>'INTEGER'
 ,p_is_required=>false
 ,p_default_value=>'5'
@@ -383,12 +384,25 @@ wwv_flow_api.create_plugin_attribute(
 ,p_plugin_id=>wwv_flow_api.id(9001004311829960)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
-,p_display_sequence=>30
+,p_display_sequence=>40
 ,p_prompt=>'Error Message'
 ,p_attribute_type=>'TEXTAREA'
 ,p_is_required=>true
 ,p_show_in_wizard=>false
 ,p_default_value=>'Captcha is wrong'
+,p_is_translatable=>true
+);
+wwv_flow_api.create_plugin_attribute(
+ p_id=>wwv_flow_api.id(5011228105302531)
+,p_plugin_id=>wwv_flow_api.id(9001004311829960)
+,p_attribute_scope=>'COMPONENT'
+,p_attribute_sequence=>4
+,p_display_sequence=>30
+,p_prompt=>'Placeholder'
+,p_attribute_type=>'TEXT'
+,p_is_required=>true
+,p_show_in_wizard=>false
+,p_default_value=>'Enter Code'
 ,p_is_translatable=>true
 );
 end;
