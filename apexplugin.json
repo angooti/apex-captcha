@@ -1,0 +1,32 @@
+{
+    "name" : "Apex Captcha",
+    "version" : "1.0",
+    "description" : "This plugin allows you to create captcha for your forms",
+    "keywords" : ["ITEM", "CAPTCHA"],
+    "homepage" : "https://github.com/angooti/Apex-Captcha",
+    "bugs" : {
+      "url" : "https://github.com/angooti/Apex-Captcha/issues",
+      "email" : "ra.angooti@gmail.com"
+    },
+    "license" : "MIT",
+    "author" : {
+      "name" : "Ramin Angooti",
+      "email" : "ra.angooti@gmail.com"
+    },
+    "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/angooti/Apex-Captcha"
+    },
+   "oracle" : {
+      "versions": ["11.2.0.1", "12.1.0.1", "12.2.0.1", "18.4.0.0", "19.0.0.0.0"],
+      "apex": {
+        "versions": ["18.2.0.00.12", "19.1.0.00.15", "19.2.0.00.18", "20.1.0.00.13", "20.2.0.00.20"],
+        "plugin" : {
+          "internalName" : "ANGOOTI.CAPTCHA",
+          "type" : "item",
+          "demo" : "https://apex.oracle.com/pls/apex/sdembele/r/79291/intl-phone-number",
+          "previewImage" : "https://raw.githubusercontent.com/angooti/Apex-Captcha/main/apex-captcha.gif"
+        }
+      }
+    }
+  }
