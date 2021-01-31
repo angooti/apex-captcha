@@ -182,7 +182,7 @@ wwv_flow_api.create_plugin(
 '                padding: 0px 0px 0px 0px;',
 '                border-radius: 6px;',
 '                padding-top: 0px;',
-'                margin: 0px 0px 0px 0px;',
+'                margin: 0px 0px 6px 0px;',
 '                border: 1px solid #dbd8d8;',
 '                background: URL("#BG_IMG#");',
 '            }'';',
