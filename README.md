@@ -1,5 +1,5 @@
 # Oracle APEX Item Plugin - Apex-Captcha
-This plugin allows you to create captcha for your forms
+This plugin allows you to create captcha for your APEX forms
 
 ## Preview
 ![](https://github.com/angooti/Apex-Captcha/blob/main/apex-captcha.gif)
