@@ -17,7 +17,12 @@ This plugin allows you to create captcha for your APEX forms
 - Placeholder:    The text displayed in field.
 
 ## Changelog
-#### 1.0.0 - Initial Release
+
+#### 1.1 - Initial Release
+- solve refresh issue in firefox
+
+#### 1.0 -
+- Initial Release
 
 ## License
 MIT
