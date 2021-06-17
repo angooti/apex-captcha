@@ -18,7 +18,7 @@ This plugin allows you to create captcha for your APEX forms
 
 ## Changelog
 
-#### 1.1 - Initial Release
+#### 1.1
 - solve refresh issue in firefox
 
 #### 1.0 -
