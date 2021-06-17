@@ -135,7 +135,7 @@ wwv_flow_api.create_plugin(
 'begin',
 '    for i in 1..length(p_code) loop',
 '        v_char := substr(p_code,i,1);',
-'        v_path := ''wwv_flow.show?p_flow_id=#FLOW_ID#&p_flow_step_id=#STEP_ID#&p_instance=#INSTANCE_ID#&x01=show_image&x02=#INDEX#&p_request=PLUGIN=#IDENT_CODE#'';',
+'        v_path := ''wwv_flow.show?p_flow_id=#FLOW_ID#&p_flow_step_id=#STEP_ID#&p_instance=#INSTANCE_ID#&x01=show_image&x02=#INDEX#&p_request=PLUGIN=#IDENT_CODE#&time='' || trunc(dbms_random.value(1111111111,9999999999));',
 '        v_path := replace(v_path, ''#FLOW_ID#'', APEX_APPLICATION.G_FLOW_ID);',
 '        v_path := replace(v_path, ''#STEP_ID#'', APEX_APPLICATION.G_FLOW_STEP_ID);',
 '        v_path := replace(v_path, ''#INSTANCE_ID#'', v(''APP_SESSION''));',
